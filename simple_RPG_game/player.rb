@@ -1,5 +1,5 @@
 # require_relativeは、現在のファイルからの相対パスで指定されたファイルを読み込む
-reauire_relative 'character'
+require_relative 'character'
 
 class Player < Character
   attr_reader :potions
