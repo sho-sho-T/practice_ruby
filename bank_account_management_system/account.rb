@@ -3,7 +3,7 @@ class Account
 
   def initialize(account_number, initial_balance = 0)
     @account_number = account_number
-    @balance = balance
+    @balance = initial_balance
   end
 
   def deposit(amount)
