@@ -10,7 +10,7 @@ class Bank
   end
 
   def create_account(type, account_number, initial_balance = 0)
-    # TODO: typeを追加する時にcase文を変更しなければならなくなったり色々良くないのでうまいこと継承を使いたい
+    # TODO: typeを追加する時にcase文を変更しなければならなくなったり色々良くないのでどうにかしたい
     case type
     when :savings
       @accounts[account_number] = SavingsAccount.new(account_number, initial_balance)
