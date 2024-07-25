@@ -1,3 +1,4 @@
+# 全てのメディアアイテムの基底クラス
 class Item
   attr_reader :title, :item_id
   attr_accessor :checked_out # インスタンス変数check_outに対する読み取りメソッドと書き込みメソッドの両方を定義する
