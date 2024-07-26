@@ -8,8 +8,17 @@ class Member
   end
 
   def borrow_item(item)
-    @borrow_items << item
+    @borrowed_items << item
     puts "#{@name}が#{item.title}を借りました"
+  end
+
+  def return_item(item)
+    if @borrowed_items.include?(item)
+      @borrowed_items.delete(item)
+      puts "#{@name}が#{item.title}を返却しました。"
+    else
+      puts "#{@name}はこのアイテムを借りていません。"
+    end
   end
 
   def display_borrowed_items
@@ -17,7 +26,7 @@ class Member
       puts "#{@name}は現在何も借りていません。"
     else
       puts "#{@name}が借りているアイテム："
-      @borrow_items.each do |item|
+      @borrowed_items.each do |item|
         puts "- #{item.title}"
       end
     end

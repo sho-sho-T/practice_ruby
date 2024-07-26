@@ -2,7 +2,7 @@
 
 class Library
   def initialize
-    @item = []
+    @items = []
     @members = []
   end
 
